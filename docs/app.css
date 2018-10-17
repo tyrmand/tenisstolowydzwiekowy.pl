@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+div div.container {
+  margin: auto 1em;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
+  div div.container img {
+    object-fit: contain; }
+  div div.container h1 {
+    color: #15156b;
+    font-size: 4rem;
+    text-align: center; }
+  div div.container p {
+    font-size: 2rem;
+    text-align: center; }
+
