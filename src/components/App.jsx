@@ -8,7 +8,7 @@ export default class App extends Component {
                 <div className="container">
                     <img src="./images/logo-tsd.jpg"></img>
                     <h1>Strona w gruntownej przebudowie!</h1>
-                    <p>Najnowsze informacje znajdziesz na naszym funpage'u <a href="https://www.facebook.com/dzwiekowy/">Tenis Stowy Dźwiękowy</a> </p>
+                    <p>Najnowsze informacje znajdziesz na naszym funpage'u <a href="https://www.facebook.com/dzwiekowy/">Tenis Stołowy Dźwiękowy</a> </p>
                 </div>
             </Fragment>
         );
