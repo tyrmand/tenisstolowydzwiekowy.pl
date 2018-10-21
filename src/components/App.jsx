@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
 import {HashRouter, Route, Switch} from "react-router-dom";
+import Menu from './Menu';
 
 export default class App extends Component {
     render() {
         return (
-                <h1>Hello The Coders!</h1>
+            <React.Fragment>
+                <Menu />
+            </React.Fragment>
         );
     }
 }
