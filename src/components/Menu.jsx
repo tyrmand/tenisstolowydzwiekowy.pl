@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SlideMenu from "./SlideMenu";
 
 class Menu extends Component {
 	state = {
@@ -22,8 +23,7 @@ class Menu extends Component {
 
     topicsMenu = () => {
         const arrayOfTopic = this.state.firstTopic;
-        return arrayOfTopic.map(topic => <div key={topic.id} className="py-2 d-none d-md-inline-block text-primary" href="#">{topic}</div>)
-    
+        return arrayOfTopic.map(topic => <a key={topic} className="py-2 d-none d-md-inline-block text-primary" href="#">{topic}</a>)
     };
     
 	render() {
@@ -55,17 +55,19 @@ class Menu extends Component {
 
                     {this.topicsMenu()}
                     
-					<div className={'hamburgerMenuContainer'}>
+					<div className={'d-flex d-md-none d-xl-none hamburgerMenuContainer'}>
 						<div id="nav-icon3" onClick={this.hamburgerMenu} className={this.state.isOpen} href="#">
 							<span />
 							<span />
 							<span />
 							<span />
 						</div>
-						<div className="py-2 d-none d-md-inline-block text-primary">MENU</div>
+						<div className="py-2 d-md-inline-block text-primary textMenuContainer">MENU</div>
 					</div>
 				</div>
+                <SlideMenu openMenu={this.state.isOpen} topics={this.state.firstTopic}/>
 			</nav>
+            
 		);
     }
     
