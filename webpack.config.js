@@ -89,7 +89,7 @@ module.exports = function (env) {
                 filename: "app.css", // definiujemy adres pliku css
             }),
             new CopyWebpackPlugin([
-                {from: './src/images', to: 'images'},
+                {from: './src/components/images', to: 'images'},
             ])
 
         ]
