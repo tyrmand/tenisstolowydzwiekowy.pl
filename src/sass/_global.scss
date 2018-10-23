@@ -1,31 +1,4 @@
-body {
+* {
     margin: 0;
     padding: 0;
-}
-
-$theBestColor: rgb(21, 21, 107);
-
-div {
-    div.container {
-        margin: auto 1em;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-
-        img {
-            object-fit: contain;
-        }
-
-        h1 {
-            color: $theBestColor;
-            font-size: 4rem;
-            text-align: center;
-        }
-
-        p {
-            font-size: 2rem;
-            text-align: center;
-        }
-    }
 }
