@@ -18,7 +18,7 @@ class SlideMenu extends Component {
 
     render() { 
         return (
-            <div>
+            <div className="mainContainerForDropDownMenu">
                 {this.openMenuFunction()}
             </div>
         );
