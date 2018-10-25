@@ -2,3 +2,31 @@
     margin: 0;
     padding: 0;
 }
+
+$theBestColor: rgb(21, 21, 107);
+
+div {
+    div.containerForWaringMessage {
+        margin: auto 1em;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        // z-index: 1000;
+
+        img {
+            object-fit: contain;
+        }
+
+        h1 {
+            color: $theBestColor;
+            font-size: 4rem;
+            text-align: center;
+        }
+
+        p {
+            font-size: 2rem;
+            text-align: center;
+        }
+    }
+}
