@@ -1,5 +1,10 @@
+.mainContainerForDropDownMenu{
+	// z-index: 99;
+}
+
 .containerForSlideMenuTopics{
-    width: 100%;
+	width: 100%;
+	
 }
 
 .slideDownMenu {
@@ -9,7 +14,7 @@
     justify-content: center;
     font-weight: bold;
     color: blue;
-    cursor: pointer;
+	cursor: pointer;
 }
 
 .slideDown:hover{
