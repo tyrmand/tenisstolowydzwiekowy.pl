@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import SlideMenu from "./SlideMenu";
+import {NavLink, Link} from 'react-router-dom';
+
 
 class Menu extends Component {
 	state = {
         isOpen: '',
         firstTopic:[
-            "START",
+			"START",
+			"O NAS",
             "TENIS STOŁOWY",
             "JAK ZACZĄĆ?",
-            "O NAS",
             "POMOC"
         ]
 	};
@@ -19,11 +21,17 @@ class Menu extends Component {
 		} else {
 			this.setState({ isOpen: '' });
 		}
-    };
+	};
+	
+	closeMenu = () => {
+		this.setState({
+			isOpen: ''
+		})
+	}
 
     topicsMenu = () => {
         const arrayOfTopic = this.state.firstTopic;
-        return arrayOfTopic.map(topic => <a key={topic} className="py-2 d-none d-md-inline-block text-primary" href="#">{topic}</a>)
+        return arrayOfTopic.map((topic, item) => <li key={topic} className="py-2 d-none d-md-inline-block text-primary" onClick={this.closeMenu}><NavLink  to={`/${item}`} replace>{topic}</NavLink></li>)
     };
     
 	render() {

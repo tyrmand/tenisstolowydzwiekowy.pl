@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import {NavLink, Link} from 'react-router-dom';
 
 class SlideMenu extends Component {
 
     topicsMenu = () => {
         const arrayOfTopic = this.props.topics;
-        return arrayOfTopic.map(topic => <div key={topic} className="d-flex d-md-none d-xl-none slideDownMenu slideDown" href="#">{topic}</div>)
+        return arrayOfTopic.map((topic, item) => <li key={topic} className="d-flex d-md-none d-xl-none slideDownMenu slideDown" onClick={this.openMenuFunction}><NavLink  to={`/${item}`} replace>{topic}</NavLink></li>)
     };
 
     openMenuFunction = () => {
@@ -14,8 +15,7 @@ class SlideMenu extends Component {
             )
         }
     }
-
-
+    
     render() { 
         return (
             <div>
