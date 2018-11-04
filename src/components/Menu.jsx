@@ -9,11 +9,10 @@ class Menu extends Component {
 		this.state = {
 			isOpen: 'close',
 			firstTopic: [
-				"START",
-				"O NAS",
-				"TENIS STOŁOWY",
-				"JAK ZACZĄĆ?",
-				"POMOC"
+				"start",
+				"o nas",
+				"zawody",
+				"kontakt"
 			]
 		}
 	};

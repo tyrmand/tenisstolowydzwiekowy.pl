@@ -120,3 +120,6 @@ div div.containerForWaringMessage {
   background-image: url(images/start-img.jpg);
   background-size: cover; }
 
+nav a {
+  text-transform: uppercase; }
+
