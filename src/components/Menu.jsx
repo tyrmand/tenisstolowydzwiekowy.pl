@@ -1,39 +1,37 @@
 import React, { Component } from 'react';
 import SlideMenu from "./SlideMenu";
-import {NavLink, Link} from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 
 class Menu extends Component {
-	state = {
-        isOpen: '',
-        firstTopic:[
-			"START",
-			"O NAS",
-            "TENIS STOŁOWY",
-            "JAK ZACZĄĆ?",
-            "POMOC"
-        ]
+	constructor(props) {
+		super(props);
+		this.state = {
+			isOpen: 'close',
+			firstTopic: [
+				"START",
+				"O NAS",
+				"TENIS STOŁOWY",
+				"JAK ZACZĄĆ?",
+				"POMOC"
+			]
+		}
 	};
 
 	hamburgerMenu = () => {
-		if (this.state.isOpen === '') {
+		if (this.state.isOpen === 'close') {
 			this.setState({ isOpen: 'open' });
 		} else {
-			this.setState({ isOpen: '' });
+			this.setState({ isOpen: 'close' });
 		}
 	};
-	
-	closeMenu = () => {
-		this.setState({
-			isOpen: ''
-		})
-	}
 
-    topicsMenu = () => {
-        const arrayOfTopic = this.state.firstTopic;
-        return arrayOfTopic.map((topic, item) => <li key={topic} className="py-2 d-none d-md-inline-block text-primary" onClick={this.closeMenu}><NavLink  to={`/${item}`} replace>{topic}</NavLink></li>)
-    };
-    
+
+	topicsMenu = () => {
+		const arrayOfTopic = this.state.firstTopic;
+		return arrayOfTopic.map((topic, item) => <li key={topic} className="py-2 d-none d-md-inline-block text-primary" ><NavLink to={`/${item}`} replace>{topic}</NavLink></li>)
+	};
+
 	render() {
 		return (
 			<nav className="site-header sticky-top py-1 bg-light">
@@ -61,8 +59,8 @@ class Menu extends Component {
 						</svg>
 					</a>
 
-                    {this.topicsMenu()}
-                    
+					{this.topicsMenu()}
+
 					<div className={'d-flex d-md-none d-xl-none hamburgerMenuContainer'}>
 						<div id="nav-icon3" onClick={this.hamburgerMenu} className={this.state.isOpen} href="#">
 							<span />
@@ -73,12 +71,12 @@ class Menu extends Component {
 						<div className="py-2 d-md-inline-block text-primary textMenuContainer">MENU</div>
 					</div>
 				</div>
-                <SlideMenu openMenu={this.state.isOpen} topics={this.state.firstTopic}/>
+				<SlideMenu openMenu={this.state.isOpen} topics={this.state.firstTopic} closeMenu={this.hamburgerMenu} />
 			</nav>
-            
+
 		);
-    }
-    
+	}
+
 }
 
 export default Menu;

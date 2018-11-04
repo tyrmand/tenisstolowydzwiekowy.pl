@@ -32,6 +32,17 @@
 	-webkit-animation-timing-function: ease;							
 }
 
+.slideUp {
+	animation-name: slideDown;
+	-webkit-animation-name: slideDown;	
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: reverse;	
+	-webkit-animation-timing-function: reverse;
+}
+
 @keyframes slideDown {
 	0% {
 		transform: translateY(-100%);
@@ -51,25 +62,4 @@
 	100% {
 		transform: translateY(0%);
 	}		
-}
-
-@-webkit-keyframes slideDown {
-	0% {
-		-webkit-transform: translateY(-100%);
-	}
-	50%{
-		-webkit-transform: translateY(8%);
-	}
-	65%{
-		-webkit-transform: translateY(-4%);
-	}
-	80%{
-		-webkit-transform: translateY(4%);
-	}
-	95%{
-		-webkit-transform: translateY(-2%);
-	}			
-	100% {
-		-webkit-transform: translateY(0%);
-	}	
 }

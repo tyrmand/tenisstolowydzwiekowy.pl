@@ -11,7 +11,7 @@ export default class Start extends Component {
                             <h1 className="display-4">Strona w gruntownej przebudowie!</h1>
                             <hr className="my-4" />
                             <p className="lead">Najnowsze informacje znajdziesz na naszym fanpage'u</p>
-                            <a class="btn btn-primary btn-lg" href="https://www.facebook.com/dzwiekowy/" role="button" target="_blank">Tenis Stołowy Dźwiękowy</a>
+                            <a className="btn btn-primary btn-lg" href="https://www.facebook.com/dzwiekowy/" role="button" target="_blank">Tenis Stołowy Dźwiękowy</a>
                         </div>
                     </div>
                 </div>
