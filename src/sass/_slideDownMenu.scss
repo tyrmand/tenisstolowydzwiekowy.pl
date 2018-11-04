@@ -1,65 +1,56 @@
-.mainContainerForDropDownMenu{
-	// z-index: 99;
-}
-
-.containerForSlideMenuTopics{
+.containerForSlideMenuTopics {
 	width: 100%;
-	
+	position: absolute;
+	top: 140px;
+	z-index: 999;
 }
 
 .slideDownMenu {
-    padding: 1em 0;
-    margin-top: 1em;
-    background: rgb(188, 188, 197);
-    justify-content: center;
-    font-weight: bold;
-    color: blue;
+	padding: 1em 0;
+	background: rgb(223, 223, 224);
+	justify-content: center;
+	font-weight: bold;
+	color: blue;
 	cursor: pointer;
 }
 
-.slideDown:hover{
-    background: rgb(103, 103, 189)
+.slideDown:hover {
+	background: rgb(103, 103, 189)
 }
 
-.slideDown{
+.slideDown {
 	animation-name: slideDown;
-	-webkit-animation-name: slideDown;	
+	-webkit-animation-name: slideDown;
 
-	animation-duration: 1s;	
+	animation-duration: 1s;
 	-webkit-animation-duration: 1s;
 
-	animation-timing-function: ease;	
-	-webkit-animation-timing-function: ease;							
-}
-
-.slideUp {
-	animation-name: slideDown;
-	-webkit-animation-name: slideDown;	
-
-	animation-duration: 1s;	
-	-webkit-animation-duration: 1s;
-
-	animation-timing-function: reverse;	
-	-webkit-animation-timing-function: reverse;
+	animation-timing-function: ease;
+	-webkit-animation-timing-function: ease;
 }
 
 @keyframes slideDown {
 	0% {
 		transform: translateY(-100%);
 	}
-	50%{
+
+	50% {
 		transform: translateY(8%);
 	}
-	65%{
+
+	65% {
 		transform: translateY(-4%);
 	}
-	80%{
+
+	80% {
 		transform: translateY(4%);
 	}
-	95%{
+
+	95% {
 		transform: translateY(-2%);
-	}			
+	}
+
 	100% {
 		transform: translateY(0%);
-	}		
+	}
 }

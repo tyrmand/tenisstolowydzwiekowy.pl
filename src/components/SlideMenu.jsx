@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import {NavLink, Link} from 'react-router-dom';
 
 class SlideMenu extends Component {
-    
+
 
     topicsMenu = () => {
         const arrayOfTopic = this.props.topics;
-        return arrayOfTopic.map((topic, item) => <li key={topic} className="d-flex d-md-none d-xl-none slideDownMenu slideDown" onClick={this.openMenuFunction}><NavLink  to={`/${item}`} replace>{topic}</NavLink></li>)
+        return arrayOfTopic.map((topic, item) => <NavLink key={item} className="d-flex d-md-none d-xl-none slideDownMenu slideDown" to={`/${item}`} replace>{topic}</NavLink>)
     };
 
     closeMenu = (event) => {
@@ -25,7 +25,7 @@ class SlideMenu extends Component {
     
     render() { 
         return (
-            <div className={`mainContainerForDropDownMenu ${this.props.openMenu}`} onClick={this.props.closeMenu}>
+            <div className="mainContainerForDropDownMenu" onClick={this.props.closeMenu}>
                 {this.openMenuFunction()}
             </div>
         );
