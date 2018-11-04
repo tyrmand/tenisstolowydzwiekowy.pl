@@ -38,29 +38,6 @@ export default class ContactForm extends Component {
         document.getElementById('contact-form').reset();
     }
 
-      handleChangeName = (event) => {
-        this.setState({
-            name: event.target.value,
-        })
-      }
-
-      handleChangePhone = (event) => {
-        this.setState({
-            phone: event.target.value,
-        })
-      }
-
-      handleChangeEmail = (event) => {
-          this.setState({
-              email: event.target.value
-          })
-      }
-
-      handleChangeText = (event) => {
-          this.setState({
-              text: event.target.value
-          })
-      }
 
     render() {
         return (
@@ -69,7 +46,7 @@ export default class ContactForm extends Component {
                     <div className="control-group form-group">
                         <div className="controls">
                             <label htmlFor="name">Imię i nazwisko:</label>
-                            <input id="name" type="text" className="form-control" value={this.state.name} onChange={this.handleChangeName} required data-validation-required-message="To pole jest wymagane" />
+                            <input id="name" type="text" className="form-control" />
                             <p className="help-block"></p>
                         </div>
                     </div>
@@ -82,18 +59,18 @@ export default class ContactForm extends Component {
                     <div className="control-group form-group">
                         <div className="controls">
                             <label htmlFor="email">Email:</label>
-                            <input id="email" type="email" className="form-control" value={this.state.email} onChange={this.handleChangeEmail} aria-describedby="emailHelp"/>
+                            <input id="email" type="email" className="form-control" aria-describedby="emailHelp"/>
                         </div>
                     </div>
                     <div className="control-group form-group">
                         <div className="controls">
                             <label htmlFor="message">Wiadomość:</label>
-                            <textarea id="message" rows="10" cols="100" className="form-control" value={this.state.text} onChange={this.handleChangeText}
+                            <textarea id="message" rows="10" cols="100" className="form-control"
                                 maxLength="999"></textarea>
                         </div>
                     </div>
                     {/* <!-- For success/fail messages --> */}
-                    <button type="submit" className="btn btn-info" value="Submit">Wyślij</button>
+                    <button type="submit" className="btn btn-info">Wyślij</button>
                 </form>
             </div>
         )
