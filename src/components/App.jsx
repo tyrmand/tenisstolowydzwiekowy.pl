@@ -6,6 +6,7 @@ import StartPage from './Start';
 import NotFound from './NotFound';
 import About from './About';
 import Contact from './Contact.jsx'
+import Footer from './Footer';
 
 export default class App extends Component {
     render() {
@@ -24,6 +25,7 @@ export default class App extends Component {
                             <Route path='/5' component={NotFound} />
                             <Route component={NotFound} />
                         </Switch>
+                        <Footer/>
                     </Fragment>
                 </HashRouter>
             </div>
