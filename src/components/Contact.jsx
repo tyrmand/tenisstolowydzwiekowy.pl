@@ -22,7 +22,7 @@ export default class Contact extends Component {
                                 Paweł Białek: <a href="tel:+48-604-946-580" className="insideLink">668-336-781</a>
                             </p>
                             <p>
-                                E-mail: <a href="mailto:biuro@mitraposadzki.pl">tenis@dzwiekowy.pl</a>
+                                E-mail: <a href="mailto:tenis@dzwiekowy.pl">tenis@dzwiekowy.pl</a>
                             </p>
                             <p>
                                 {/* <!-- Czynne: Poniedziałek - Piątek: 8:00 do 18:00  --> */}
@@ -33,13 +33,13 @@ export default class Contact extends Component {
 
                     {/* <!-- Contact Form --> */}
                     {/* <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. --> */}
-                    <div className="row">
+                    {/* <div className="row">
                         <div className="col-lg-8 mb-4">
                             <h3>Zostaw wiadomość, skontaktujemy się z Tobą.</h3>
                             <ContactForm/>
                         </div>
 
-                    </div>
+                    </div> */}
                     {/* /.row */}
 
                 </div>
