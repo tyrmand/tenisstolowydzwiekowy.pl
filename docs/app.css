@@ -1,20 +1,125 @@
-body {
+* {
   margin: 0;
   padding: 0; }
 
-div div.container {
+div div.containerForWaringMessage {
   margin: auto 1em;
   height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column; }
-  div div.container img {
+  div div.containerForWaringMessage img {
     object-fit: contain; }
-  div div.container h1 {
+  div div.containerForWaringMessage h1 {
     color: #15156b;
     font-size: 4rem;
     text-align: center; }
-  div div.container p {
+  div div.containerForWaringMessage p {
     font-size: 2rem;
     text-align: center; }
+
+#nav-icon3 {
+  width: 3em;
+  height: 3em;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column; }
+
+#nav-icon3 span {
+  display: block;
+  position: absolute;
+  height: 0.5em;
+  width: 100%;
+  background: #0056B3;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out; }
+
+/* Icon 3 */
+#nav-icon3 span:nth-child(1) {
+  top: 0; }
+
+#nav-icon3 span:nth-child(2),
+#nav-icon3 span:nth-child(3) {
+  top: 0.8em; }
+
+#nav-icon3 span:nth-child(4) {
+  top: 1.6em; }
+
+#nav-icon3.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%; }
+
+#nav-icon3.open span:nth-child(2) {
+  transform: rotate(45deg); }
+
+#nav-icon3.open span:nth-child(3) {
+  transform: rotate(-45deg); }
+
+#nav-icon3.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%; }
+
+.hamburgerMenuContainer {
+  margin-top: 2px;
+  height: 4em;
+  flex-direction: column;
+  align-items: center; }
+
+.textMenuContainer {
+  margin-top: 2.5em; }
+
+.containerForSlideMenuTopics {
+  width: 100%;
+  position: absolute;
+  top: 140px;
+  z-index: 999; }
+
+.slideDownMenu {
+  padding: 1em 0;
+  background: #dfdfe0;
+  justify-content: center;
+  font-weight: bold;
+  color: blue;
+  cursor: pointer; }
+
+.slideDown:hover {
+  background: #6767bd; }
+
+.slideDown {
+  animation-name: slideDown;
+  -webkit-animation-name: slideDown;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  animation-timing-function: ease;
+  -webkit-animation-timing-function: ease; }
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%); }
+  50% {
+    transform: translateY(8%); }
+  65% {
+    transform: translateY(-4%); }
+  80% {
+    transform: translateY(4%); }
+  95% {
+    transform: translateY(-2%); }
+  100% {
+    transform: translateY(0%); } }
+
+.start-img {
+  height: 90vh;
+  background-image: url(images/start-img.jpg);
+  background-size: cover; }
+
+nav a {
+  text-transform: uppercase; }
 
